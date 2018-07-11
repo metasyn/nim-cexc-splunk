@@ -29,12 +29,12 @@ proc handler(metadata: JsonNode, body: string): tuple[metadata: JsonNode, body: 
   if action == "execute":
     return handleExecute(metadata, body)
 
-let 
-  i = newFileStream(stdin)
-  o = newFileStream(stdout)
 
 if isMainModule:
-  let myCommand = "foo"
+  let 
+    i = newFileStream(stdin)
+    o = newFileStream(stdout)
+    myCommand = "foo"
   setupLogger(myCommand)
   # Now logging to "$SPLUNK_HOME/var/log/foo.log"
   # or ./foo.log if $SPLUNK_HOME isn't set
