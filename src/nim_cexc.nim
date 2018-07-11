@@ -8,7 +8,7 @@ from logging import error, debug
 import streams
 from os import sleep
 
-import ./cexc/setupLogging
+import ./nim_cexc/setupLogging
 
 let emptyChunk = (metadata: %* "", body: "", eof: true)
 
