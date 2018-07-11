@@ -3,8 +3,8 @@ from json import JsonNode, `$`, `%*`, getStr, `[]`
 from strformat import fmt
 from streams import newFileStream
 
-from nim_cexc import run
-from setupLogging import setupLogger
+from ../nim_cexc import run
+from ./setupLogging import setupLogger
 
 proc handleGetinfo(metadata: JsonNode, body: string): tuple[metadata: JsonNode, body: string] =
   ## Use this method to communicate back to the chunked protocol what kind of command we are.
